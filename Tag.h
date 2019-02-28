@@ -1,17 +1,15 @@
 #ifndef TAG_H
 #define TAG_H
 
-#include <unordered_set>
+#include <vector>
 #include <string>
-#include "Image.h"
-
-typedef std::unordered_set<Image*> imgHashTab;
+#include "Slide.h"
 
 class Tag{
   std::string name;
-  imgHashTab images;
+  std::vector<Slide*> slides;
 public:
-  Tag(std::string name){this.name= name;}
+  Tag(std::string name){this->name = name;}
   void addImage(Image* img){images.insert(img);}
 }
 
