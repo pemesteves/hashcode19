@@ -21,6 +21,7 @@ int main(){
         ver_images = p.second;
     }
 
+
     return 0;
 }
 
@@ -66,7 +67,7 @@ pair<vector<Image*>, vector<Image*>> divide_images(vector<Image*> &images){
     vector<Image*> hor, ver;
 
     for(unsigned i = 0; i < images.size(); i++){
-        if(images[i]->isHorizontal)
+        if(images[i]->isHorizontal())
             hor.push_back(images[i]);
         else
             ver.push_back(images[i]);
