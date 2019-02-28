@@ -10,7 +10,7 @@ class Tag{
   std::vector<Slide*> slides;
 public:
   Tag(std::string name){this->name = name;}
-  void addSlide(Slide* sld){slides.insert(sld);}
+  void addSlide(Slide* sld){slides.push_back(sld);}
 }
 
 #endif
