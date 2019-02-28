@@ -11,6 +11,7 @@ class Tag{
 public:
   Tag(std::string name){this->name = name;}
   void addSlide(Slide* sld){slides.push_back(sld);}
-}
+  
+};
 
 #endif
