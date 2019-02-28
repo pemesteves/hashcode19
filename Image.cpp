@@ -2,7 +2,7 @@
 
 using namespace std;
 
-unsigned int Image::sequential_id = 1;
+unsigned int Image::sequential_id = 0;
 
 Image::Image(bool is_hor, unsigned int num_tags){
     this->is_horizontal = is_hor;
@@ -29,4 +29,8 @@ bool Image::isHorizontal(){
 
 void Image::addTag(std::string tag){
     this->tags.insert(tag);
+}
+
+bool Image::operator<(Image img){
+    return this->num_tags*this->getID() < img.getNumTags()*img.getID();
 }

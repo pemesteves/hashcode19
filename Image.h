@@ -20,6 +20,7 @@ public:
     hash_table getTags();
     bool isHorizontal();
     void addTag(std::string tag);
+    bool operator<(Image img);
 };
 
 #endif
