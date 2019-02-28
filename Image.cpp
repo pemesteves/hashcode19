@@ -2,13 +2,19 @@
 
 using namespace std;
 
-hash_table tags;
-    unsigned int num_tags;
-    bool is_horizontal;
-
 Image::Image(bool is_hor, unsigned int num_tags){
     this.is_horizontal;
     this.num_tags = num_tags;
+    this.id = Image::sequential_id;
+    Image::sequential_id++;
+}
+
+void Image::initialize_ids(){
+    Image::sequential_id = 1; 
+}
+
+unsigned int Image::getID(){
+    return this.id;
 }
 
 unsigned int Image::getNumTags(){
