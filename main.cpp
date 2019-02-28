@@ -11,8 +11,6 @@ pair<vector<Image*>, vector<Image*>> readFile(std::string file_name);
 pair<vector<Image*>, vector<Image*>> divide_images(vector<Image*> &images);
 
 int main(){
-    Image::initialize_ids();
-
     vector<Image*> hor_images, ver_images;
     
     {

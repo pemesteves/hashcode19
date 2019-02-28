@@ -2,11 +2,13 @@
 
 using namespace std;
 
+unsigned int Image::sequential_id = 1;
+
 Image::Image(bool is_hor, unsigned int num_tags){
     this->is_horizontal = is_hor;
     this->num_tags = num_tags;
-    this->id = Image::sequential_id;
-    Image::sequential_id++;
+    this->id = sequential_id;
+    sequential_id++;
 }
 
 unsigned int Image::getID(){

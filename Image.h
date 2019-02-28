@@ -15,7 +15,6 @@ class Image{
     bool is_horizontal;
 public:
     Image(bool is_hor, unsigned int num_tags);
-    static void initialize_ids(){Image::sequential_id = 1;}
     unsigned int getID();
     unsigned int getNumTags();
     hash_table getTags();
