@@ -19,7 +19,7 @@ unsigned int Image::getNumTags(){
     return this->num_tags;
 }
 
-hash_table Image::getTags(){
+vector<std::string> Image::getTags(){
     return this->tags;
 }
 
@@ -28,7 +28,7 @@ bool Image::isHorizontal(){
 }
 
 void Image::addTag(std::string tag){
-    this->tags.insert(tag);
+    this->tags.push_back(tag);
 }
 
 bool Image::operator<(Image img){
