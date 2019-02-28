@@ -3,14 +3,15 @@
 
 #include <unordered_set>
 #include <string>
-typedef unordered_set<Image*> imgHashTab;
+#include "Image.h"
 
+typedef std::unordered_set<Image*> imgHashTab;
 
 class Tag{
-  string name;
+  std::string name;
   imgHashTab images;
 public:
-  Tag(string name){this.name= name;}
+  Tag(std::string name){this.name= name;}
   void addImage(Image* img){images.insert(img);}
 }
 
